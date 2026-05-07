@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+@theme {
+  --color-aurum-gold: #C5A059;
+  --color-aurum-deep: #1E1E1E;
+  --color-aurum-card: rgba(255, 255, 255, 0.05);
+  --color-bright-gold: #E5C27C;
+  --font-cinzel: "Cinzel", serif;
+  --font-inter: "Inter", sans-serif;
+}
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Inter:wght@300;400;600&display=swap');
+
+  body {
+    background-color: var(--color-aurum-deep);
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    font-family: var(--font-inter);
+    margin: 0;
+  }
+
+  h1, h2, h3, .font-cinzel {
+    font-family: var(--font-cinzel);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+  }
+}
+
+@layer components {
+  .btn-aurum {
+    @apply px-8 py-3 border border-aurum-gold text-aurum-gold 
+           uppercase tracking-[0.2em] text-[10px] transition-all duration-500
+           hover:bg-aurum-gold hover:text-aurum-deep font-bold rounded-sm;
+  }
+
+  .container-custom {
+    width: 100%;
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
+  .glass-effect {
+    background-color: var(--color-aurum-card);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+}
