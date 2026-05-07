@@ -1,3 +1,5 @@
+import React from 'react';
+// Importamos las dos piezas que creamos
 import Hero from '../components/home/Hero';
 import FeaturedDancers from '../components/home/FeaturedDancers'; 
 import ProcessSection from '../components/home/ProcessSection';
@@ -7,8 +9,6 @@ const Home = () => {
     <div className="flex flex-col w-full min-h-screen">
       {/* 1. HERO SECTION: Intriga y Bienvenida */}
       <Hero />
-
-      {/* 2. BAILARINES DESTACADOS: 3 Tarjetas */}
       <FeaturedDancers />
 
       {/* 3. EL PROCESO */}
