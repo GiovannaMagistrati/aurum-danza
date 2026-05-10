@@ -1,5 +1,4 @@
 import React from 'react';
-// Importamos las dos piezas que creamos
 import Hero from '../components/home/Hero';
 import FeaturedDancers from '../components/home/FeaturedDancers'; 
 import ProcessSection from '../components/home/ProcessSection';
