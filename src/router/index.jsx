@@ -2,7 +2,8 @@ import { createBrowserRouter } from 'react-router-dom';
 import MainLayout from '../components/layout/MainLayout';
 import Home from '../pages/Home';
 import ExploreTalent from '../pages/ExploreTalent';
-import Castings from '../pages/Castings'; // ¡Aprovechamos para sumar Castings!
+import Castings from '../pages/Castings';
+import Login from '../pages/Login'; 
 
 export const router = createBrowserRouter([
   {
@@ -23,4 +24,8 @@ export const router = createBrowserRouter([
       },
     ],
   },
+  {
+    path: "/login",
+    element: <Login />, // Aquí no heredaría el MainLayout
+  }
 ]);
