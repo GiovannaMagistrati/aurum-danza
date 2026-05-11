@@ -38,7 +38,7 @@ const Navbar = () => {
 
                         <div className="flex justify-center items-center gap-6 lg:gap-10 text-[10px] uppercase tracking-[0.2em] lg:tracking-[0.4em] font-light text-white/80 whitespace-nowrap">
                             <Link to="/talents" className="hover:text-aurum-gold transition-all duration-300">Explore Talent</Link>
-                            <Link to="/castings" className="hover:text-aurum-gold transition-all duration-300">Castings</Link>
+                            <Link to="/castings" className="hover:text-aurum-gold transition-all duration-300">Auditions</Link>
                             <Link to="/about" className="hover:text-aurum-gold transition-all duration-300">About Us</Link>
                         </div>
 

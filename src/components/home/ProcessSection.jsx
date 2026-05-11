@@ -76,7 +76,6 @@ const ProcessSection = ({ isLoggedIn }) => {
               </Button>
             </ProtectedAction>
           </div>
-
         </div>
       </div>
     </section>

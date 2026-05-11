@@ -29,7 +29,7 @@ const Footer = () => {
               Navigation
             </h4>
             <ul className="flex flex-col items-center gap-4">
-              {['Talents', 'Castings', 'About'].map((item) => (
+              {['Talents', 'Auditions', 'About'].map((item) => (
                 <li key={item}>
                   <Link
                     to={`/${item.toLowerCase()}`}

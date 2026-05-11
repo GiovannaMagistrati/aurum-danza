@@ -31,6 +31,6 @@ export const router = createBrowserRouter([
   },
   {
     path: "/login",
-    element: <Login />, // Aquí no heredaría el MainLayout
+    element: <Login />,
   }
 ]);
