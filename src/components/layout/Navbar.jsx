@@ -21,18 +21,25 @@ const Navbar = () => {
 
     return (
         <>
-            <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-500 ease-in-out flex items-center ${
+            <nav className={`fixed top-0 left-0 right-0 z-[100] transition-all duration-700 ease-in-out flex items-center ${
                 isScrolled || isOpen 
-                ? 'bg-[#0a0a0a]/95 backdrop-blur-md border-b border-aurum-gold/10 h-20' 
-                : 'bg-transparent h-24 border-b border-transparent'
+                ? 'bg-[#0a0a0a]/95 backdrop-blur-md border-b border-aurum-gold/10 h-24' 
+                : 'bg-transparent h-32 border-b border-transparent'
             }`}>
                 <div className="container-custom w-full">
 
                     {/* DESKTOP & TABLET */}
                     <div className="hidden md:grid grid-cols-[1fr_2fr_1fr] lg:grid-cols-3 items-center w-full">
                         <div className="flex justify-start">
-                            <Link to="/" onClick={() => window.scrollTo(0, 0)}>
-                                <img src={logoAurum} alt="Logo" className="h-8 lg:h-10 w-auto object-contain" />
+                            <Link to="/" onClick={() => window.scrollTo(0, 0)} className="group">
+                                {/* Incrementamos el tamaño considerablemente */}
+                                <img 
+                                    src={logoAurum} 
+                                    alt="Logo Aurum" 
+                                    className={`transition-all duration-700 ease-in-out object-contain ${
+                                        isScrolled ? 'h-20 lg:h-24' : 'h-28 lg:h-32'
+                                    } group-hover:scale-105`} 
+                                />
                             </Link>
                         </div>
 
@@ -43,7 +50,6 @@ const Navbar = () => {
                         </div>
 
                         <div className="flex justify-end">
-                            {/* CONECTADO AL LOGIN */}
                             <Button to="/login" variant="outline" className="px-6 lg:px-8">
                                 Login
                             </Button>
@@ -51,9 +57,15 @@ const Navbar = () => {
                     </div>
 
                     {/* ONLY PHONES */}
-                    <div className="flex md:hidden items-center justify-between w-full">
+                    <div className="flex md:hidden items-center justify-between w-full px-2">
                         <Link to="/" onClick={() => setIsOpen(false)}>
-                            <img src={logoAurum} alt="Logo" className="h-9 w-auto object-contain" />
+                            <img 
+                                src={logoAurum} 
+                                alt="Logo" 
+                                className={`transition-all duration-500 ${
+                                    isScrolled ? 'h-12' : 'h-16'
+                                } w-auto object-contain`} 
+                            />
                         </Link>
 
                         <button
@@ -75,7 +87,6 @@ const Navbar = () => {
                 <Link to="/castings" onClick={() => setIsOpen(false)} className="font-cinzel text-3xl tracking-[0.4em] text-white hover:text-aurum-gold transition-colors">CASTINGS</Link>
                 <Link to="/about" onClick={() => setIsOpen(false)} className="font-cinzel text-3xl tracking-[0.4em] text-white hover:text-aurum-gold transition-colors">ABOUT</Link>
                 
-                {/* CONECTADO AL LOGIN EN MÓVIL */}
                 <Button to="/login" variant="outline" className="mt-8 px-12 py-4 text-sm" onClick={() => setIsOpen(false)}>
                     LOGIN
                 </Button>

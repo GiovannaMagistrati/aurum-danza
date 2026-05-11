@@ -12,70 +12,70 @@ import d9 from '../assets/images/bailarina-9.jpg';
 export const DANCERS_DATA = [
   {
     id: 1,
-    name: 'Ana Silva',
-    featured: true, // Destacado para la Home
-    role: 'Prima Ballerina',
-    category: 'Classical',
+    name: 'Leo Cortez', // Varon
+    featured: true,
+    role: 'Contemporary Soloist',
+    category: 'Contemporary',
     location: 'Madrid, ES',
     image: d1
   },
   {
     id: 2,
-    name: 'Leo Cortez',
-    featured: true, // Destacado para la Home
-    role: 'Contemporary Soloist',
-    category: 'Contemporary',
-    location: 'London, UK',
+    name: 'Julian Rose', // Varon
+    featured: true,
+    role: 'Urban Specialist',
+    category: 'Commercial',
+    location: 'New York, US',
     image: d2
   },
   {
     id: 3,
-    name: 'Mía Wong',
-    featured: true, // Destacado para la Home
-    role: 'Neoclassical Artist',
-    category: 'Neoclassical',
+    name: 'Clara Duval', // Mujer
+    featured: true,
+    role: 'Fashion & Dance',
+    category: 'Commercial',
     location: 'Paris, FR',
     image: d3
   },
   {
     id: 4,
-    name: 'Julian Rose',
+    name: 'Mía Wong', // Mujer
     featured: false,
-    role: 'Urban Specialist',
-    category: 'Commercial',
-    location: 'New York, US',
+    role: 'Neoclassical Artist',
+    category: 'Neoclassical',
+    location: 'Hong Kong, HK',
     image: d4
   },
   {
     id: 5,
-    name: 'Elena Vlad',
-    featured: false,
-    role: 'Principal Dancer',
-    category: 'Classical',
-    location: 'Berlin, DE',
-    image: d5
-  },
-  {
-    id: 6,
-    name: 'Marcus Kane',
+    name: 'Marcus Kane', // Varon
     featured: false,
     role: 'Expressive Artist',
     category: 'Contemporary',
     location: 'Milan, IT',
+    image: d5
+  },
+  {
+    id: 6,
+    name: 'Elena Petrov', // Mujer (Corregido de Marcus)
+    featured: false,
+    role: 'Prima Ballerina',
+    category: 'Contemporary',
+    location: 'Berlin, DE',
     image: d6
   },
   {
     id: 7,
-    name: 'Clara Duval',
+    name: 'Sofia Ricci', // Mujer (Corregido de Clara)
     featured: false,
-    role: 'Fashion & Dance',
-    category: 'Commercial',
+    role: 'Prima Ballerina',
+    category: 'Classical',
     location: 'Tokyo, JP',
     image: d7
   },
   {
     id: 8,
-    name: 'Sasha Meyer',
+    name: 'John Meyer', // Varon (Ajustado nombre masculino/neutro)
     featured: false,
     role: 'Lyric Specialist',
     category: 'Contemporary',
@@ -84,7 +84,7 @@ export const DANCERS_DATA = [
   },
   {
     id: 9,
-    name: 'Victor Paz',
+    name: 'Valentina Paz', // Mujer (Corregido de Victor)
     featured: false,
     role: 'Technique Expert',
     category: 'Neoclassical',
