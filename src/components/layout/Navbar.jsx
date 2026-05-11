@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logoAurum from '../../assets/images/logo.png';
+import Button from '../ui/Button'; // Importamos nuestro nuevo componente
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -35,7 +36,6 @@ const Navbar = () => {
                             </Link>
                         </div>
 
-                        {/* AJUSTE: Fuente siempre en 10px, tracking y gap dinámicos para proteger el espacio */}
                         <div className="flex justify-center items-center gap-6 lg:gap-10 text-[10px] uppercase tracking-[0.2em] lg:tracking-[0.4em] font-light text-white/80 whitespace-nowrap">
                             <Link to="/talents" className="hover:text-aurum-gold transition-all duration-300">Explore Talent</Link>
                             <Link to="/castings" className="hover:text-aurum-gold transition-all duration-300">Castings</Link>
@@ -43,9 +43,10 @@ const Navbar = () => {
                         </div>
 
                         <div className="flex justify-end">
-                            <button className="px-6 lg:px-8 py-2 border border-aurum-gold/40 text-aurum-gold font-inter text-[10px] uppercase tracking-[0.2em] lg:tracking-[0.3em] hover:bg-aurum-gold hover:text-black transition-all duration-500 rounded-sm">
+                            {/* Reemplazamos las clases manuales por el componente UI */}
+                            <Button variant="outline" className="px-6 lg:px-8">
                                 Login
-                            </button>
+                            </Button>
                         </div>
                     </div>
 
@@ -73,9 +74,11 @@ const Navbar = () => {
                 <Link to="/talents" onClick={() => setIsOpen(false)} className="font-cinzel text-3xl tracking-[0.4em] text-white hover:text-aurum-gold transition-colors">EXPLORE</Link>
                 <Link to="/castings" onClick={() => setIsOpen(false)} className="font-cinzel text-3xl tracking-[0.4em] text-white hover:text-aurum-gold transition-colors">CASTINGS</Link>
                 <Link to="/about" onClick={() => setIsOpen(false)} className="font-cinzel text-3xl tracking-[0.4em] text-white hover:text-aurum-gold transition-colors">ABOUT</Link>
-                <button className="mt-8 px-12 py-4 border border-aurum-gold text-aurum-gold font-inter text-sm uppercase tracking-[0.3em]">
+                
+                {/* También lo usamos aquí para mantener la consistencia */}
+                <Button variant="outline" className="mt-8 px-12 py-4 text-sm">
                     LOGIN
-                </button>
+                </Button>
             </div>
         </>
     );

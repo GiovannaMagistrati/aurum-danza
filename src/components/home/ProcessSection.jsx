@@ -1,16 +1,18 @@
 import React from 'react';
+import Button from '../ui/Button';
+import ProtectedAction from '../ui/ProtectedAction';
 
-const ProcessSection = () => {
+const ProcessSection = ({ isLoggedIn }) => {
   const talentSteps = [
-    { icon: 'Ⅰ', title: 'Create your Profile', desc: 'Upload your best work and technical details.' },
-    { icon: 'Ⅱ', title: 'Get Discovered', desc: 'Your portfolio is showcased to top-tier agencies.' },
-    { icon: 'Ⅲ', title: 'Perform', desc: 'Connect directly and secure your next professional role.' },
+    { icon: 'Ⅰ', title: 'CREATE YOUR PROFILE', desc: 'Upload your best work and technical details.' },
+    { icon: 'Ⅱ', title: 'GET DISCOVERED', desc: 'Your portfolio is showcased to top-tier agencies.' },
+    { icon: 'Ⅲ', title: 'PERFORM', desc: 'Connect directly and secure your next professional role.' },
   ];
 
   const recruiterSteps = [
-    { icon: 'Ⅰ', title: 'Access the Elite', desc: 'Browse a hand-picked selection of world-class dancers.' },
-    { icon: 'Ⅱ', title: 'Filter by Vision', desc: 'Search by specialty, location and technical skills.' },
-    { icon: 'Ⅲ', title: 'Book Directly', desc: 'Contact with the talent that fits your production\'s soul.' },
+    { icon: 'Ⅰ', title: 'ACCESS THE ELITE', desc: 'Browse a hand-picked selection of world-class dancers.' },
+    { icon: 'Ⅱ', title: 'FILTER BY VISION', desc: 'Search by specialty, location and technical skills.' },
+    { icon: 'Ⅲ', title: 'BOOK DIRECTLY', desc: 'Contact with the talent that fits your production\'s soul.' },
   ];
 
   return (
@@ -23,11 +25,10 @@ const ProcessSection = () => {
         </h2>
         <p className="font-inter font-light text-white/60 tracking-wider text-sm mb-16">Two paths. One Standard.</p>
 
-        {/* Las Dos Cards Principales (Grid 1 o 2 columnas) */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 w-full max-w-7xl">
           
           {/* FOR TALENT */}
-          <div className="glass-effect rounded-sm p-12 flex flex-col items-center">
+          <div className="glass-effect rounded-sm p-12 flex flex-col items-center border border-white/5">
             <h3 className="font-cinzel text-xl text-aurum-gold tracking-[0.2em] mb-2">FOR TALENT</h3>
             <p className="font-inter text-[10px] uppercase tracking-[0.3em] font-light text-white/50 mb-12">THE PATH TO GOLD</p>
             
@@ -42,14 +43,17 @@ const ProcessSection = () => {
                 </div>
               ))}
             </div>
-
-            <button className="btn-aurum hover:bg-white hover:text-aurum-deep transition-all duration-300">
-              JOIN AS TALENT
-            </button>
+            
+            {/* TRAMPA CON CENTRADO REPARADO */}
+            <ProtectedAction isLoggedIn={isLoggedIn} className="w-full flex justify-center">
+              <Button variant="solid" to="/join" className="w-full sm:w-auto">
+                JOIN AS TALENT
+              </Button>
+            </ProtectedAction>
           </div>
 
-          {/* FOR RECRUITERS */}
-          <div className="glass-effect rounded-sm p-12 flex flex-col items-center">
+          {/* FOR RECRUITERS  */}
+          <div className="glass-effect rounded-sm p-12 flex flex-col items-center border border-white/5">
             <h3 className="font-cinzel text-xl text-aurum-gold tracking-[0.2em] mb-2">FOR RECRUITERS</h3>
             <p className="font-inter text-[10px] uppercase tracking-[0.3em] font-light text-white/50 mb-12">THE SEARCH FOR EXCELLENCE</p>
             
@@ -65,9 +69,12 @@ const ProcessSection = () => {
               ))}
             </div>
 
-            <button className="btn-aurum border-white text-white hover:bg-white hover:text-aurum-deep transition-all duration-300">
-              RECRUIT EXCELLENCE
-            </button>
+            {/* TRAMPA CON CENTRADO REPARADO */}
+            <ProtectedAction isLoggedIn={isLoggedIn} className="w-full flex justify-center">
+              <Button variant="outline" to="/recruit" className="w-full sm:w-auto">
+                RECRUIT EXCELLENCE
+              </Button>
+            </ProtectedAction>
           </div>
 
         </div>

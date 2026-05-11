@@ -4,7 +4,6 @@ import heroImg from '../../assets/images/hero.png';
 const Hero = () => {
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-aurum-deep">
-      {/* Fondo con tratamiento de imagen */}
       <div className="absolute inset-0 z-0">
         <img 
           src={heroImg} 
