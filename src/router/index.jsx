@@ -3,24 +3,29 @@ import MainLayout from '../components/layout/MainLayout';
 import Home from '../pages/Home';
 import ExploreTalent from '../pages/ExploreTalent';
 import Castings from '../pages/Castings';
-import Login from '../pages/Login'; 
+import Login from '../pages/Login';
+import About from '../pages/About';
 
 export const router = createBrowserRouter([
   {
     path: "/",
-    element: <MainLayout />, 
+    element: <MainLayout />,
     children: [
       {
-        index: true, 
+        index: true,
         element: <Home />,
       },
       {
-        path: "talents", 
+        path: "talents",
         element: <ExploreTalent />,
       },
       {
-        path: "castings", 
+        path: "castings",
         element: <Castings />,
+      },
+      {
+        path: "about",
+        element: <About />,
       },
     ],
   },
