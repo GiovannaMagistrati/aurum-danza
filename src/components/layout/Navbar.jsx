@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import logoAurum from '../../assets/images/logo.png';
-import Button from '../ui/Button'; // Importamos nuestro nuevo componente
+import Button from '../ui/Button'; 
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -43,8 +43,8 @@ const Navbar = () => {
                         </div>
 
                         <div className="flex justify-end">
-                            {/* Reemplazamos las clases manuales por el componente UI */}
-                            <Button variant="outline" className="px-6 lg:px-8">
+                            {/* CONECTADO AL LOGIN */}
+                            <Button to="/login" variant="outline" className="px-6 lg:px-8">
                                 Login
                             </Button>
                         </div>
@@ -75,8 +75,8 @@ const Navbar = () => {
                 <Link to="/castings" onClick={() => setIsOpen(false)} className="font-cinzel text-3xl tracking-[0.4em] text-white hover:text-aurum-gold transition-colors">CASTINGS</Link>
                 <Link to="/about" onClick={() => setIsOpen(false)} className="font-cinzel text-3xl tracking-[0.4em] text-white hover:text-aurum-gold transition-colors">ABOUT</Link>
                 
-                {/* También lo usamos aquí para mantener la consistencia */}
-                <Button variant="outline" className="mt-8 px-12 py-4 text-sm">
+                {/* CONECTADO AL LOGIN EN MÓVIL */}
+                <Button to="/login" variant="outline" className="mt-8 px-12 py-4 text-sm" onClick={() => setIsOpen(false)}>
                     LOGIN
                 </Button>
             </div>
