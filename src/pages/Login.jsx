@@ -4,7 +4,6 @@ import logoAurum from '../assets/images/logo.png';
 import Button from '../components/ui/Button';
 
 const Login = () => {
-  // Iniciamos en true para que lo primero que vea el usuario sea el ingreso
   const [isLogin, setIsLogin] = useState(true); 
   const [role, setRole] = useState('dancer'); 
   const [showPassword, setShowPassword] = useState(false);
@@ -26,7 +25,6 @@ const Login = () => {
   const validate = () => {
     let newErrors = {};
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
     if (!emailRegex.test(formData.email)) newErrors.email = "Invalid email format";
     if (formData.password.length < 6) newErrors.password = "Min. 6 characters";
     
@@ -43,7 +41,6 @@ const Login = () => {
         if (!formData.contactPerson) newErrors.contactPerson = "Required";
       }
     }
-
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
@@ -58,6 +55,7 @@ const Login = () => {
 
   return (
     <div className="min-h-screen bg-[#050505] flex items-center justify-center px-4 relative overflow-hidden py-20">
+      {/* SECCIÓN DE ESTILOS INYECTADOS */}
       <style>{`
         @keyframes subtle-shake {
           0%, 100% { transform: translateX(0); }
@@ -65,6 +63,16 @@ const Login = () => {
           75% { transform: translateX(4px); }
         }
         .animate-shake { animation: subtle-shake 0.3s cubic-bezier(.36,.07,.19,.97) both; }
+
+        /* FIX PARA AUTOFILL DE CHROME/SAFARI */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover, 
+        input:-webkit-autofill:focus, 
+        input:-webkit-autofill:active {
+          -webkit-text-fill-color: white !important;
+          -webkit-box-shadow: 0 0 0px 1000px #0a0a0a inset !important;
+          transition: background-color 5000s ease-in-out 0s;
+        }
       `}</style>
 
       <div className="absolute top-12 left-12 z-50">

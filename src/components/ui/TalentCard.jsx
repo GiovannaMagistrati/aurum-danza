@@ -27,14 +27,11 @@ const TalentCard = ({ name, image, role, location, isLoggedIn, category }) => {
           <h3 className="font-cinzel text-lg md:text-xl text-white tracking-[0.1em] uppercase">
             {name}
           </h3>
-          <span className="text-[7px] text-aurum-gold/50 border border-aurum-gold/20 px-2 py-0.5 rounded-full uppercase tracking-widest">
-            {category}
-          </span>
         </div>
         
         <div className="flex justify-between items-center border-t border-white/10 pt-4 mb-6">
           <p className="font-inter text-[8px] md:text-[9px] text-white/40 uppercase tracking-[0.2em]">
-            {role}
+            {category}
           </p>
           <span className="font-inter text-aurum-gold text-[8px] md:text-[9px] tracking-[0.2em] uppercase">
             {location}

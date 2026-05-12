@@ -5,6 +5,7 @@ import ExploreTalent from '../pages/ExploreTalent';
 import Castings from '../pages/Castings';
 import Login from '../pages/Login';
 import About from '../pages/About';
+import NotFound from '../pages/NotFound';
 
 export const router = createBrowserRouter([
   {
@@ -26,6 +27,10 @@ export const router = createBrowserRouter([
       {
         path: "about",
         element: <About />,
+      },
+      { 
+        path: "*", 
+        element: <NotFound />
       },
     ],
   },
