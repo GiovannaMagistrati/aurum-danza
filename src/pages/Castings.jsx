@@ -1,6 +1,8 @@
-import React, { useState } from 'react'; // 1. Agregamos useState
+import React, { useState } from 'react';
 import CastingCard from '../components/castings/CastingCard';
-import ProtectedAction from '../components/ui/ProtectedAction'; // Importamos el escudo
+import ProtectedAction from '../components/ui/ProtectedAction';
+import Button from '../components/ui/Button';
+
 
 const Castings = () => {
   // Simulación de estado de login (luego vendrá de un Context global)
@@ -17,9 +19,9 @@ const Castings = () => {
       <div className="container-custom">
         
         {/* Encabezado de la Sección */}
-        <div className="mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
+        <div className="mt-20 mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div className="max-w-xl">
-            <h2 className="font-cinzel text-3xl md:text-5xl text-white mb-6 tracking-tight">
+            <h2 className="font-cinzel text-3xl md:text-5xl text-white mb-6 tracking-[0.3em]">
               OPEN <span className="text-aurum-gold">CASTINGS</span>
             </h2>
             <p className="font-inter text-[10px] md:text-xs text-white/40 tracking-[0.2em] uppercase leading-relaxed">
@@ -29,10 +31,13 @@ const Castings = () => {
 
           {/* LA TRAMPA PARA RECLUTADORES: Botón para agregar casting */}
           <ProtectedAction isLoggedIn={isLoggedIn}>
-            <button className="px-8 py-4 bg-aurum-gold text-black font-inter text-[10px] uppercase tracking-[0.3em] hover:bg-white transition-all duration-500">
-              Post a Casting
-            </button>
-          </ProtectedAction>
+          <Button
+            variant="outline"
+            className="w-full md:w-auto"
+          >
+            Post Audition
+          </Button>
+        </ProtectedAction>
         </div>
 
         {/* Grid de Cards */}

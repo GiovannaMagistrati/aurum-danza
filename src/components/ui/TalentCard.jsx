@@ -1,5 +1,6 @@
 import React from 'react';
 import ProtectedAction from './ProtectedAction';
+import Button from '../ui/Button';
 
 const TalentCard = ({ name, image, role, location, isLoggedIn, category }) => {
   return (
@@ -7,20 +8,20 @@ const TalentCard = ({ name, image, role, location, isLoggedIn, category }) => {
       {/* 1. Área de Imagen Protegida (Redirige a login si no está autenticado) */}
       <ProtectedAction isLoggedIn={isLoggedIn}>
         <div className="relative aspect-[4/5] md:aspect-[3/4] overflow-hidden bg-neutral-900 mb-5 border border-white/5 cursor-pointer">
-          <img 
-            src={image} 
-            alt={`${name} - ${role}`} 
+          <img
+            src={image}
+            alt={`${name} - ${role}`}
             className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-1000 md:group-hover:scale-105"
           />
           {/* Overlay cinemático */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-700 flex items-end p-6 md:p-8">
-             <span className="text-aurum-gold font-inter text-[8px] md:text-[10px] tracking-[0.3em] uppercase">
-               View Full Portfolio
-             </span>
+            <span className="text-aurum-gold font-inter text-[8px] md:text-[10px] tracking-[0.3em] uppercase">
+              View Full Portfolio
+            </span>
           </div>
         </div>
       </ProtectedAction>
-      
+
       {/* 2. Información del Talento */}
       <div className="px-2 md:px-0">
         <div className="flex justify-between items-start mb-2">
@@ -28,7 +29,7 @@ const TalentCard = ({ name, image, role, location, isLoggedIn, category }) => {
             {name}
           </h3>
         </div>
-        
+
         <div className="flex justify-between items-center border-t border-white/10 pt-4 mb-6">
           <p className="font-inter text-[8px] md:text-[9px] text-white/40 uppercase tracking-[0.2em]">
             {category}
@@ -40,13 +41,9 @@ const TalentCard = ({ name, image, role, location, isLoggedIn, category }) => {
 
         {/* 3. Acción de Contacto Protegida */}
         <ProtectedAction isLoggedIn={isLoggedIn}>
-          <button 
-            className="w-full py-3 border border-white/5 text-[8px] md:text-[9px] text-white/30 uppercase tracking-[0.3em] 
-                       hover:border-aurum-gold/50 hover:text-aurum-gold hover:bg-aurum-gold/[0.02] 
-                       transition-all duration-700 ease-out"
-          >
+          <Button variant="minimal">
             Contact Talent
-          </button>
+          </Button>
         </ProtectedAction>
       </div>
     </article>

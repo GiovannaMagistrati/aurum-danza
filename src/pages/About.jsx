@@ -12,11 +12,11 @@ const About = () => {
       <div className="container-custom">
         
         {/* HERO SECTION - ABOUT */}
-        <div className="max-w-4xl mb-32">
-          <p className="font-inter text-[9px] uppercase tracking-[0.5em] text-aurum-gold mb-6">
+        <div className="max-w-4xl mt-12 mb-32">
+          <p className="font-inter text-[14px] uppercase tracking-[0.5em] text-aurum-gold mb-6">
             Our Legacy
           </p>
-          <h1 className="font-cinzel text-4xl md:text-7xl text-white tracking-[0.2em] leading-[1.1] mb-10">
+          <h1 className="font-cinzel text-3xl md:text-7xl text-white tracking-[0.3em] leading-[1.1] mb-10">
             DEFINING THE <span className="text-aurum-gold italic">FUTURE</span> OF ARTISTIC MOVEMENT
           </h1>
           <p className="font-inter font-light text-white/50 text-sm md:text-lg leading-relaxed tracking-wide max-w-2xl border-l border-aurum-gold/20 pl-8">

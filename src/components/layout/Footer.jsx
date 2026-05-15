@@ -4,67 +4,66 @@ import LogoGold from '../../assets/images/logo.png';
 
 const Footer = () => {
   return (
-    /* py-8 para hacerlo lo más bajo posible */
-    <footer className="w-full bg-[#050505] py-8 border-t border-white/5">
-      <div className="container-custom">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
-          
-          {/* COLUMNA 1: BRANDING - FORZADO AL CENTRO */}
-          <div className="flex flex-col items-center justify-center w-full">
-            <Link 
-              to="/" 
-              onClick={() => window.scrollTo(0, 0)} 
-              className="mb-3 group inline-block"
-            >
-              <img
-                src={LogoGold}
-                alt="Aurum Danza Home"
-                /* h-12 para mantener el footer compacto */
-                className="h-12 w-auto filter grayscale opacity-40 brightness-125 transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 object-contain"
-              />
-            </Link>
-            <p className="font-inter text-[7px] md:text-[8px] text-white/20 tracking-[0.4em] uppercase whitespace-nowrap">
-              Redefining the elite in motion
-            </p>
-          </div>
+    <footer className="w-full bg-[#050505] py-12 border-t border-white/5">
+      {/* Añadimos mx-auto para asegurar que el contenedor esté siempre centrado */}
+      <div className="container-custom mx-auto px-4">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start text-center">
 
-          {/* COLUMNA 2: NAVIGATION */}
+          {/* COLUMNA 1: NAVIGATION */}
           <div className="flex flex-col items-center">
-            <h4 className="font-cinzel text-[9px] text-aurum-gold tracking-[0.3em] mb-4 uppercase">
+            <h4 className="font-cinzel text-[9px] text-aurum-gold tracking-[0.3em] mb-6 uppercase">
               Navigation
             </h4>
-            <ul className="flex flex-col items-center gap-3">
+            <ul className="flex flex-col gap-3">
               <li>
-                <Link to="/talents" className="font-inter text-[8px] text-white/40 hover:text-white transition-all duration-300 tracking-[0.2em] uppercase font-light">
+                <Link to="/talents" className="font-inter text-[8px] text-white/40 hover:text-white transition-all duration-300 tracking-[0.2em] uppercase">
                   Talents
                 </Link>
               </li>
               <li>
-                <Link to="/castings" className="font-inter text-[8px] text-white/40 hover:text-white transition-all duration-300 tracking-[0.2em] uppercase font-light">
+                <Link to="/castings" className="font-inter text-[8px] text-white/40 hover:text-white transition-all duration-300 tracking-[0.2em] uppercase">
                   Auditions
                 </Link>
               </li>
               <li>
-                <Link to="/about" className="font-inter text-[8px] text-white/40 hover:text-white transition-all duration-300 tracking-[0.2em] uppercase font-light">
+                <Link to="/about" className="font-inter text-[8px] text-white/40 hover:text-white transition-all duration-300 tracking-[0.2em] uppercase">
                   About
                 </Link>
               </li>
             </ul>
           </div>
 
+          {/* COLUMNA 2: BRANDING */}
+          <div className="flex flex-col items-center justify-center order-first md:order-none">
+            <Link
+              to="/"
+              onClick={() => window.scrollTo(0, 0)}
+              className="mb-4 group"
+            >
+              <img
+                src={LogoGold}
+                alt="Aurum Danza"
+                className="h-14 w-auto filter grayscale opacity-40 brightness-125 transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
+              />
+            </Link>
+            <p className="font-inter text-[7px] md:text-[8px] text-white/20 tracking-[0.4em] uppercase">
+              Redefining the elite in motion
+            </p>
+          </div>
+
           {/* COLUMNA 3: SOCIAL */}
-          <div className="flex flex-col items-center md:items-end">
-            <h4 className="font-cinzel text-[9px] text-aurum-gold tracking-[0.3em] mb-4 uppercase">
+          <div className="flex flex-col items-center">
+            <h4 className="font-cinzel text-[9px] text-aurum-gold tracking-[0.3em] mb-6 uppercase">
               Social
             </h4>
-            <ul className="flex flex-col items-center md:items-end gap-3">
+            <ul className="flex flex-col gap-3">
               {['Instagram', 'LinkedIn', 'TikTok'].map((social) => (
                 <li key={social}>
                   <a
                     href={`https://${social.toLowerCase()}.com`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="font-inter text-[8px] text-white/40 hover:text-white transition-all duration-300 tracking-[0.2em] uppercase font-light"
+                    className="font-inter text-[8px] text-white/40 hover:text-white transition-all duration-300 tracking-[0.2em] uppercase"
                   >
                     {social}
                   </a>
@@ -74,14 +73,14 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* BARRA INFERIOR - COMPACTA */}
-        <div className="mt-8 pt-4 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-2">
-          <p className="font-inter text-[6px] text-white/10 tracking-[0.3em] uppercase">
+        {/* BARRA INFERIOR */}
+        <div className="mt-16 pt-6 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="font-inter text-[7px] text-white/10 tracking-[0.3em] uppercase">
             © 2026 Aurum Danza
           </p>
-          <div className="flex gap-4 text-[6px] text-white/10 uppercase tracking-[0.2em]">
-            <Link to="/privacy" className="hover:text-white/30">Privacy</Link>
-            <Link to="/terms" className="hover:text-white/30">Terms</Link>
+          <div className="flex gap-6 text-[7px] text-white/10 uppercase tracking-[0.2em]">
+            <Link to="/privacy" className="hover:text-white/30 transition-colors">Privacy</Link>
+            <Link to="/terms" className="hover:text-white/30 transition-colors">Terms</Link>
           </div>
         </div>
       </div>

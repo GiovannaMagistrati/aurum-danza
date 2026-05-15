@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import ProtectedAction from '../ui/ProtectedAction'; // Importamos el escudo
+import ProtectedAction from '../ui/ProtectedAction'; 
+import Button from '../ui/Button';
 
 const CastingCard = ({ title, type, location, date, id, isLoggedIn }) => {
   return (
@@ -21,7 +22,7 @@ const CastingCard = ({ title, type, location, date, id, isLoggedIn }) => {
           <h3 className="font-cinzel text-lg md:text-xl text-white/90 tracking-wider mb-2">
             {title}
           </h3>
-          
+
           <p className="font-inter text-[10px] text-white/40 tracking-[0.2em] uppercase">
             {location}
           </p>
@@ -29,18 +30,18 @@ const CastingCard = ({ title, type, location, date, id, isLoggedIn }) => {
 
         {/* ACCIONES PROTEGIDAS */}
         <div className="mt-10 flex flex-col gap-4">
-          <Link 
+          {/* El link de detalles puede quedarse así o podrías añadir una variante 'link' al Button */}
+          <Link
             to={`/castings/${id}`}
-            className="inline-block font-inter text-[9px] text-white/60 tracking-[0.3em] uppercase hover:text-white transition-colors"
+            className="inline-block font-inter text-[9px] text-white/60 tracking-[0.3em] uppercase hover:text-white transition-colors text-center"
           >
             Details
           </Link>
 
-          {/* LA TRAMPA: Si no está logueado, al hacer clic va a /login */}
           <ProtectedAction isLoggedIn={isLoggedIn}>
-            <button className="w-full py-3 border border-white/10 font-inter text-[9px] text-white tracking-[0.3em] uppercase hover:bg-white hover:text-black transition-all duration-500">
+            <Button variant="minimal">
               Apply Now
-            </button>
+            </Button>
           </ProtectedAction>
         </div>
       </div>
