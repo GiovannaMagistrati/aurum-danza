@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import logoAurum from '../../assets/images/logo.png';
+import logo from '../../assets/images/logo.png';
 import Button from '../ui/Button'; 
 
 const Navbar = () => {
@@ -33,7 +33,7 @@ const Navbar = () => {
                         <div className="flex justify-start">
                             <Link to="/" onClick={() => window.scrollTo(0, 0)} className="group">
                                 <img 
-                                    src={logoAurum} 
+                                    src={logo} 
                                     alt="Logo Aurum" 
                                     className={`transition-all duration-700 ease-in-out object-contain ${
                                         isScrolled ? 'h-20 lg:h-24' : 'h-28 lg:h-32'
@@ -59,7 +59,7 @@ const Navbar = () => {
                     <div className="flex md:hidden items-center justify-between w-full px-2">
                         <Link to="/" onClick={() => setIsOpen(false)}>
                             <img 
-                                src={logoAurum} 
+                                src={logo} 
                                 alt="Logo" 
                                 className={`transition-all duration-500 ${
                                     isScrolled ? 'h-12' : 'h-16'

@@ -1,11 +1,11 @@
 import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import logoAurum from '../assets/images/logo.png';
+import logo from '../assets/images/logo.png';
 import Button from '../components/ui/Button';
 
 const Login = () => {
-  const [isLogin, setIsLogin] = useState(true); 
-  const [role, setRole] = useState('dancer'); 
+  const [isLogin, setIsLogin] = useState(true);
+  const [role, setRole] = useState('dancer');
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const navigate = useNavigate();
@@ -76,7 +76,7 @@ const Login = () => {
       {/* Logo */}
       <div className="absolute top-12 left-12 z-50">
         <Link to="/">
-          <img src={logoAurum} alt="Logo" className="w-20 opacity-50 hover:opacity-100 transition-opacity duration-700" />
+          <img src={logo} alt="Logo" className="w-20 opacity-50 hover:opacity-100 transition-opacity duration-700" />
         </Link>
       </div>
 
