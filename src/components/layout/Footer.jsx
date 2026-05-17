@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import LogoGold from '../../assets/images/logo.png';
+import logo from '../../assets/images/logo.png';
 
 const Footer = () => {
   return (
@@ -39,7 +39,7 @@ const Footer = () => {
               className="mb-4 group"
             >
               <img
-                src={LogoGold}
+                src={logo}
                 alt="Aurum Danza"
                 className="h-14 w-auto filter grayscale opacity-40 brightness-125 transition-all duration-700 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105"
               />
