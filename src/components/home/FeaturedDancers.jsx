@@ -1,9 +1,8 @@
-import React from 'react';
 import { DANCERS_DATA } from '../../data/dancers'; 
-import TalentCard from '../ui/TalentCard'; // Importamos tu nueva card global
+import TalentCard from '../ui/TalentCard';
 
 const FeaturedDancers = () => {
-  // Filtramos para mostrar solo los destacados
+  // Filter to display featured items only
   const featuredDancers = DANCERS_DATA.filter(dancer => dancer.featured);
 
   return ( 
@@ -13,17 +12,16 @@ const FeaturedDancers = () => {
           <h2 className="font-cinzel text-3xl md:text-4xl text-white tracking-[0.2em] text-center uppercase">
             Featured <span className="text-aurum-gold">Talent</span>
           </h2>
-          {/* Un detalle visual sutil debajo del título opcional */}
           <div className="w-12 h-[1px] bg-aurum-gold/50 mt-4" />
         </div>
 
-        {/* Grid de Tarjetas utilizando el componente reutilizable */}
+        {/* Cards grid utilizing the reusable component */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 w-full">
           {featuredDancers.map((dancer) => (
             <TalentCard 
               key={dancer.id} 
               {...dancer} 
-              isLoggedIn={false} // O pasas el estado real de login si lo tienes
+              isLoggedIn={false}
             />
           ))}
         </div>

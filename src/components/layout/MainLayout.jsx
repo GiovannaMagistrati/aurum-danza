@@ -1,13 +1,12 @@
-// src/components/layout/MainLayout.jsx
 import { Outlet } from 'react-router-dom';
-import ScrollToTop from '../utils/ScrollToTop'; // <--- Importalo acá
+import ScrollToTop from '../utils/ScrollToTop';
 import Navbar from './Navbar';
 import Footer from './Footer';
 
 const MainLayout = () => {
   return (
     <div className="bg-aurum-deep min-h-screen flex flex-col">
-      <ScrollToTop /> {/* <--- Ponelo acá arriba */}
+      <ScrollToTop />
       <Navbar />
       <main className="flex-1">
         <Outlet /> 

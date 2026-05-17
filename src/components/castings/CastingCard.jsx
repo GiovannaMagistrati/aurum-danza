@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import ProtectedAction from '../ui/ProtectedAction'; 
 import Button from '../ui/Button';
@@ -28,9 +27,8 @@ const CastingCard = ({ title, type, location, date, id, isLoggedIn }) => {
           </p>
         </div>
 
-        {/* ACCIONES PROTEGIDAS */}
+        {/* PROTECTED ACTIONS */}
         <div className="mt-10 flex flex-col gap-4">
-          {/* El link de detalles puede quedarse así o podrías añadir una variante 'link' al Button */}
           <Link
             to={`/castings/${id}`}
             className="inline-block font-inter text-[9px] text-white/60 tracking-[0.3em] uppercase hover:text-white transition-colors text-center"

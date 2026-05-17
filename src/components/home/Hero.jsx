@@ -1,4 +1,3 @@
-import React from 'react';
 import heroImg from '../../assets/images/hero.png'; 
 
 const Hero = () => {
@@ -13,10 +12,10 @@ const Hero = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-aurum-deep/40 via-transparent to-aurum-deep"></div>
       </div>
       
-      {/* Contenido Central */}
+      {/* Main Content */}
       <div className="container-custom relative z-10 flex flex-col items-center text-center">
         
-        {/* TEXTO */}
+        {/* TEXT */}
         <p className="font-inter text-[10px] md:text-[12px] uppercase tracking-[0.5em] text-aurum-gold mb-6 animate-fade-in">
           Elevating the standard of dance
         </p>
@@ -25,7 +24,7 @@ const Hero = () => {
           AURUM <span className="text-aurum-gold">DANZA</span>
         </h1>
         
-        {/* Indicador de scroll para invitar a bajar */}
+        {/* Scroll */}
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4">
           <div className="w-[1px] h-12 bg-gradient-to-b from-aurum-gold to-transparent"></div>
         </div>

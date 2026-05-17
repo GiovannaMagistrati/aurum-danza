@@ -32,7 +32,6 @@ const Navbar = () => {
                     <div className="hidden md:grid grid-cols-[1fr_2fr_1fr] lg:grid-cols-3 items-center w-full">
                         <div className="flex justify-start">
                             <Link to="/" onClick={() => window.scrollTo(0, 0)} className="group">
-                                {/* Incrementamos el tamaño considerablemente */}
                                 <img 
                                     src={logoAurum} 
                                     alt="Logo Aurum" 
@@ -79,7 +78,7 @@ const Navbar = () => {
                 </div>
             </nav>
 
-            {/* MENÚ MÓVIL FULLSCREEN */}
+            {/* MOBILE MENU FULLSCREEN */}
             <div className={`fixed inset-0 w-full h-full z-[90] bg-[#050505] flex flex-col items-center justify-center gap-12 transition-all duration-700 ease-in-out ${
                 isOpen ? 'translate-y-0 opacity-100' : '-translate-y-full opacity-0'
             } md:hidden`}>

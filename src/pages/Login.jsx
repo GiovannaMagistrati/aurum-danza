@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import logoAurum from '../assets/images/logo.png';
 import Button from '../components/ui/Button';
@@ -165,7 +165,6 @@ const Login = () => {
   );
 };
 
-// Componente InputField con Labels más visibles
 const InputField = ({ label, name, type = "text", placeholder, value, onChange, error, isVisible, onToggleVisibility }) => {
   const isPasswordField = type === 'password';
   const inputType = isPasswordField && isVisible ? 'text' : type;
@@ -193,7 +192,6 @@ const InputField = ({ label, name, type = "text", placeholder, value, onChange, 
   );
 };
 
-// Componente SelectField con Labels más visibles
 const SelectField = ({ label, name, value, onChange, error, options }) => (
   <div className={`space-y-2 ${error ? 'animate-shake' : ''}`}>
     <label className="text-[9px] uppercase tracking-[0.3em] ml-1 text-white/60 block mb-1">{label}</label>

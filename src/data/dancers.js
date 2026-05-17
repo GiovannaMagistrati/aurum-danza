@@ -12,7 +12,7 @@ import d9 from '../assets/images/bailarina-9.jpg';
 export const DANCERS_DATA = [
   {
     id: 1,
-    name: 'Leo Cortez', // Varon
+    name: 'Leo Cortez', 
     featured: true,
     role: 'Contemporary Soloist',
     category: 'Contemporary',
@@ -21,7 +21,7 @@ export const DANCERS_DATA = [
   },
   {
     id: 2,
-    name: 'Julian Rose', // Varon
+    name: 'Julian Rose', 
     featured: true,
     role: 'Urban Specialist',
     category: 'Commercial',
@@ -30,7 +30,7 @@ export const DANCERS_DATA = [
   },
   {
     id: 3,
-    name: 'Clara Duval', // Mujer
+    name: 'Clara Duval', 
     featured: true,
     role: 'Fashion & Dance',
     category: 'Commercial',
@@ -39,7 +39,7 @@ export const DANCERS_DATA = [
   },
   {
     id: 4,
-    name: 'Mía Wong', // Mujer
+    name: 'Mía Wong', 
     featured: false,
     role: 'Neoclassical Artist',
     category: 'Neoclassical',
@@ -48,7 +48,7 @@ export const DANCERS_DATA = [
   },
   {
     id: 5,
-    name: 'Marcus Kane', // Varon
+    name: 'Marcus Kane', 
     featured: false,
     role: 'Expressive Artist',
     category: 'Contemporary',
@@ -57,7 +57,7 @@ export const DANCERS_DATA = [
   },
   {
     id: 6,
-    name: 'Elena Petrov', // Mujer (Corregido de Marcus)
+    name: 'Elena Petrov', 
     featured: false,
     role: 'Prima Ballerina',
     category: 'Contemporary',
@@ -66,7 +66,7 @@ export const DANCERS_DATA = [
   },
   {
     id: 7,
-    name: 'Sofia Ricci', // Mujer (Corregido de Clara)
+    name: 'Sofia Ricci', 
     featured: false,
     role: 'Prima Ballerina',
     category: 'Classical',
@@ -75,7 +75,7 @@ export const DANCERS_DATA = [
   },
   {
     id: 8,
-    name: 'John Meyer', // Varon (Ajustado nombre masculino/neutro)
+    name: 'John Meyer', 
     featured: false,
     role: 'Lyric Specialist',
     category: 'Contemporary',
@@ -84,7 +84,7 @@ export const DANCERS_DATA = [
   },
   {
     id: 9,
-    name: 'Valentina Paz', // Mujer (Corregido de Victor)
+    name: 'Valentina Paz', 
     featured: false,
     role: 'Technique Expert',
     category: 'Neoclassical',

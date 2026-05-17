@@ -1,10 +1,6 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import Button from '../components/ui/Button';
 import aboutImage from '../assets/images/img-ballerina.png'
 
-// Nota: Importa aquí tu imagen cuando la elijas
-// import aboutImage from '../assets/images/about-essence.jpg';
 
 const About = () => {
   return (
@@ -24,7 +20,7 @@ const About = () => {
           </p>
         </div>
 
-        {/* ESTRUCTURA DE VALORES (Grid) */}
+        {/* VALUES STRUCTURE (Grid) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-16 mb-40">
           <div className="group space-y-5">
             <h3 className="font-cinzel text-aurum-gold text-xl tracking-widest flex items-center gap-4">
@@ -52,7 +48,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* SECCIÓN INTERMEDIA - EL MANIFIESTO */}
+        {/* INTERMEDIATE SECTION */}
         <div className="w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent mb-32" />
 
         <div className="flex flex-col lg:flex-row items-center gap-24">
@@ -70,21 +66,15 @@ const About = () => {
             </div>
           </div>
           
-          {/* IMAGEN CINEMATOGRÁFICA */}
+          {/* IMAGE */}
           <div className="flex-1 w-full aspect-[4/5] md:aspect-video lg:aspect-[4/5] relative overflow-hidden order-1 lg:order-2 group">
-            {/* Overlay de Grano/Textura para look Film */}
             <div className="absolute inset-0 z-10 opacity-[0.03] pointer-events-none bg-[url('https://grainy-gradients.vercel.app/noise.svg')]" />
-            
-            {/* Overlay de Gradiente */}
             <div className="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent z-20 opacity-60" />
-            
             <img 
               src={aboutImage}
               alt="Aurum Artistic Movement" 
               className="w-full h-full object-cover grayscale brightness-[0.7] group-hover:scale-110 group-hover:brightness-90 transition-all duration-[3000ms] ease-out"
             />
-            
-            {/* Border decorativo interno */}
             <div className="absolute inset-4 border border-white/5 z-30 pointer-events-none group-hover:inset-6 transition-all duration-700" />
           </div>
         </div>

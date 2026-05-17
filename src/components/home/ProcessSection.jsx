@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from '../ui/Button';
 import ProtectedAction from '../ui/ProtectedAction';
 
@@ -18,7 +17,7 @@ const ProcessSection = ({ isLoggedIn }) => {
   return (
     <section className="w-full bg-[#0a0a0a] py-24 flex flex-col items-center border-t border-white/5">
       <div className="container-custom flex flex-col items-center">
-        {/* Encabezado */}
+        {/* Title */}
         <p className="font-inter text-[9px] uppercase tracking-[0.5em] text-aurum-gold/80 mb-3">THE PROCESS</p>
         <h2 className="font-cinzel text-3xl md:text-4xl text-white tracking-[0.15em] mb-3 text-center">
           ELEVATING THE STANDARD OF CONNECTIONS
@@ -44,7 +43,7 @@ const ProcessSection = ({ isLoggedIn }) => {
               ))}
             </div>
             
-            {/* TRAMPA CON CENTRADO REPARADO */}
+            {/* PROTECTED ACTION */}
             <ProtectedAction isLoggedIn={isLoggedIn} className="w-full flex justify-center">
               <Button variant="solid" to="/join" className="w-full sm:w-auto">
                 JOIN AS TALENT
@@ -69,7 +68,7 @@ const ProcessSection = ({ isLoggedIn }) => {
               ))}
             </div>
 
-            {/* TRAMPA CON CENTRADO REPARADO */}
+            {/* PROTECTED ACTION */}
             <ProtectedAction isLoggedIn={isLoggedIn} className="w-full flex justify-center">
               <Button variant="outline" to="/recruit" className="w-full sm:w-auto">
                 RECRUIT EXCELLENCE

@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import CastingCard from '../components/castings/CastingCard';
 import ProtectedAction from '../components/ui/ProtectedAction';
 import Button from '../components/ui/Button';
 
 
 const Castings = () => {
-  // Simulación de estado de login (luego vendrá de un Context global)
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const castingData = [
@@ -17,8 +16,7 @@ const Castings = () => {
   return (
     <div className="min-h-screen bg-[#050505] pt-32 pb-20">
       <div className="container-custom">
-        
-        {/* Encabezado de la Sección */}
+
         <div className="mt-20 mb-16 md:mb-24 flex flex-col md:flex-row md:items-end justify-between gap-8">
           <div className="max-w-xl">
             <h2 className="font-cinzel text-3xl md:text-5xl text-white mb-6 tracking-[0.3em]">
@@ -28,8 +26,6 @@ const Castings = () => {
               Exclusive opportunities for professional dancers. Join the global standard of excellence.
             </p>
           </div>
-
-          {/* LA TRAMPA PARA RECLUTADORES: Botón para agregar casting */}
           <ProtectedAction isLoggedIn={isLoggedIn}>
           <Button
             variant="outline"
@@ -40,13 +36,13 @@ const Castings = () => {
         </ProtectedAction>
         </div>
 
-        {/* Grid de Cards */}
+        {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {castingData.map((casting) => (
             <CastingCard 
               key={casting.id} 
               {...casting} 
-              isLoggedIn={isLoggedIn} // 2. Le pasamos el estado a la card para el botón "Apply"
+              isLoggedIn={isLoggedIn}
             />
           ))}
         </div>

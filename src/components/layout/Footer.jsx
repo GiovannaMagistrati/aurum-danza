@@ -1,15 +1,13 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import LogoGold from '../../assets/images/logo.png';
 
 const Footer = () => {
   return (
     <footer className="w-full bg-[#050505] py-12 border-t border-white/5">
-      {/* Añadimos mx-auto para asegurar que el contenedor esté siempre centrado */}
       <div className="container-custom mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 items-start text-center">
 
-          {/* COLUMNA 1: NAVIGATION */}
+          {/* COLUMN 1: NAVIGATION */}
           <div className="flex flex-col items-center">
             <h4 className="font-cinzel text-[9px] text-aurum-gold tracking-[0.3em] mb-6 uppercase">
               Navigation
@@ -33,7 +31,7 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* COLUMNA 2: BRANDING */}
+          {/* COLUMN 2: BRANDING */}
           <div className="flex flex-col items-center justify-center order-first md:order-none">
             <Link
               to="/"
@@ -51,7 +49,7 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* COLUMNA 3: SOCIAL */}
+          {/* COLUMN 3: SOCIAL */}
           <div className="flex flex-col items-center">
             <h4 className="font-cinzel text-[9px] text-aurum-gold tracking-[0.3em] mb-6 uppercase">
               Social
